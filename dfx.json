@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ecm_backend": {
+      "main": "src/ecm_backend/main.mo",
+      "type": "motoko"
+    },
+    "ecm_frontend": {
+      "dependencies": [
+        "ecm_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ecm_frontend/src/index.html"
+      },
+      "source": [
+        "src/ecm_frontend/assets",
+        "dist/ecm_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
